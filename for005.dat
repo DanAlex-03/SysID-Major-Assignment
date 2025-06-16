@@ -1,0 +1,87 @@
+CASEID Wing + Body + Aileron
+DIM M
+ $FLTCON
+  LOOP=3.0,
+  NMACH=1.0,
+  MACH(1)=0.123,
+  NALT=1.0,
+  ALT(1)=1524.0,
+  NALPHA=1.0,
+  ALSCHD(1)=0.0$
+ $SYNTHS
+  XCG=2.11,
+  ZCG=1.26,
+  XW=1.68,
+  ZW=2.04,
+  ALIW=1.5,
+  XH=6.16,
+  ZH=1.68,
+  ALIH=0.0,
+  XV=5.88,
+  ZV=1.55,
+  SCALE=1.0,
+  VERTUP=.TRUE.$
+ $BODY
+  NX=8.0,
+  ITYPE=2.0,
+  METHOD=2.0,
+  X(1)=0.10,0.30,0.77,1.22,1.68,3.40,3.91,7.41,
+  R(1)=0.14,0.32,0.49,0.52,0.72,0.59,0.44,0.10,
+  ZU(1)=1.42,1.49,1.59,1.65,2.04,1.98,1.77,1.75,
+  ZL(1)=1.14,0.85,0.61,0.61,0.61,0.80,0.90,1.55$
+NACA-W-4-2412
+ $WGPLNF
+  CHRDR=1.626,
+  CHRDBP=1.626,
+  CHRDTP=1.13,
+  SSPN=5.49,
+  SSPNE=4.75,
+  SSPNOP=2.941,
+  SAVSI=0.0,
+  SAVSO=3.0,
+  CHSTAT=0.0,
+  TWISTA=-3.0,
+  DHDADI=1.7333,
+  DHDADO=1.7333,
+  TYPE=1.0$
+ $ASYFLP 
+  NDELTA=5.0,
+  STYPE=5.0, 
+  DELTAL(1)=-5.,-2.5,0.,2.5,5.,                              
+  DELTAR(1)=5.,2.5,0.,-2.5,-5.,                          
+  CHRDFI=0.312,
+  CHRDFO=0.312,                                 
+  SPANFI=2.44,
+  SPANFO=5.15$
+SAVE
+NEXT CASE
+CASEID Wing + Body + Vertical Tail + Horizontal Tail + Elevator
+NACA-V-4-0009
+ $VTPLNF
+  CHRDR=1.53,
+  CHRDTP=0.70,
+  SSPN=1.62,
+  SSPNE=1.42,
+  SAVSI=33.0,
+  CHSTAT=0.25,
+  TYPE=1.0$
+NACA-H-4-0012
+ $HTPLNF
+  CHRDR=1.24,
+  CHRDTP=0.77,
+  SSPN=1.73,
+  SSPNE=1.50,
+  SAVSI=9.0,
+  CHSTAT=0.0,
+  TWISTA=0.0,
+  DHDADI=0.0,
+  TYPE=1.0$
+ $SYMFLP
+  FTYPE=1.0,
+  SPANFI=0.23,
+  SPANFO=1.727,
+  CHRDFI=0.56,
+  CHRDFO=0.27,
+  NTYPE=1.0,
+DERIV RAD LATDER
+DAMP
