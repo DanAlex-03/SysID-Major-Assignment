@@ -1,5 +1,6 @@
 clear; clc;
-%% X-Plane Connect MATLAB Configuration untuk C172 Autopilot
+
+%% X-Plane Connect MATLAB Configuration for Cessna 172P Autopilot
 addpath('../')
 import XPlaneConnect.*
 
